@@ -1,7 +1,7 @@
 import { Cliente } from "./Cliente.js";
 import {CuentaCorriente} from "./CuentaCorriente.js";
 
-export class cuenta {
+export class Cuenta {
     #cliente;
     numero;
     agencia;
@@ -18,6 +18,9 @@ export class cuenta {
     }
 
     constructor(cliente, numero, agencia, saldo) {
+        if (this.constructor == Cuenta) {
+            throw new Error ("No se puede instanciar")
+        }
         this.cliente = cliente;
         this.numero = numero;
         this.agencia = agencia;
@@ -32,7 +35,8 @@ export class cuenta {
     }
 
     retirarDeCuenta(valor) {
-        _retirarDeCuenta(valor, 0)
+        //Método abstracto
+        throw new Error ("Debe implementar el método retirarDeCuenta en su clase")
     }
     _retirarDeCuenta(valor, comision) {
         valor = valor * (1+comision/100);

@@ -1,6 +1,6 @@
-import { cuenta } from "./cuenta.js";
+import { Cuenta } from "./cuenta.js";
 
-export class cuentaAhorro extends cuenta {
+export class cuentaAhorro extends Cuenta {
     constructor(cliente, numero, agencia,saldo) {
         super(cliente, numero, agencia, 0);
     }    

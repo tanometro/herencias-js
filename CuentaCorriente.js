@@ -1,7 +1,7 @@
 import { Cliente } from "./Cliente.js";
-import { cuenta } from "./cuenta.js";
+import { Cuenta } from "./cuenta.js";
 
-export class CuentaCorriente extends cuenta  {
+export class CuentaCorriente extends Cuenta  {
     static cantidadCuentas = 0;
 
     constructor(cliente, numero, agencia) {
